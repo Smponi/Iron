@@ -53,7 +53,7 @@ class PhoneConnectionManager: NSObject, ObservableObject {
 // MARK: - Receiving
 extension PhoneConnectionManager: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print(#function + " \(activationState)")
+//        print(#function + " \(activationState)")
         
         DispatchQueue.main.async {
             self.objectWillChange.send()
@@ -61,31 +61,31 @@ extension PhoneConnectionManager: WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        print(#function + " \(applicationContext)")
+//        print(#function + " \(applicationContext)")
         
         receive(message: applicationContext)
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        print(#function + " \(userInfo)")
+//        print(#function + " \(userInfo)")
         
         receive(message: userInfo)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print(#function + " \(message)")
+//        print(#function + " \(message)")
         
         receive(message: message)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        print(#function + " \(message)")
+//        print(#function + " \(message)")
         
         receive(message: message)
     }
     
     func sessionReachabilityDidChange(_ session: WCSession) {
-        print(#function + " \(session.isReachable)")
+//        print(#function + " \(session.isReachable)")
         
         DispatchQueue.main.async {
             self.objectWillChange.send()

@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F315912C149DD6007A6790 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFE3432534AB3800CF03E5 /* WidgetKit.framework */; };
+		17F315922C149DD6007A6790 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAFE3452534AB3800CF03E5 /* SwiftUI.framework */; };
+		17F315952C149DD6007A6790 /* Live_Widget_TestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F315942C149DD6007A6790 /* Live_Widget_TestBundle.swift */; };
+		17F315972C149DD6007A6790 /* Live_Widget_TestLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F315962C149DD6007A6790 /* Live_Widget_TestLiveActivity.swift */; };
+		17F315992C149DD6007A6790 /* Live_Widget_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F315982C149DD6007A6790 /* Live_Widget_Test.swift */; };
+		17F3159B2C149DD7007A6790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17F3159A2C149DD7007A6790 /* Assets.xcassets */; };
+		17F3159F2C149DD7007A6790 /* Live Widget TestExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 17F315902C149DD6007A6790 /* Live Widget TestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8A0683AE239C5B53001F0A1E /* WorkoutDataStorage+shared2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF07874239B246600CA95D6 /* WorkoutDataStorage+shared2.swift */; };
 		8A0683AF239C5B6F001F0A1E /* WorkoutDataStorage+GroupStoreURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF0785F239AF57A00CA95D6 /* WorkoutDataStorage+GroupStoreURL.swift */; };
 		8A0683B0239C5B83001F0A1E /* FileManager+GroupContainerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF0785D239AF53500CA95D6 /* FileManager+GroupContainerURL.swift */; };
@@ -372,6 +379,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		17F3159D2C149DD7007A6790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A7D6E8C200BF92E00AA0FA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17F3158F2C149DD6007A6790;
+			remoteInfo = "Live Widget TestExtension";
+		};
 		8A0683B9239C77B4001F0A1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A7D6E8C200BF92E00AA0FA7 /* Project object */;
@@ -471,6 +485,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				17F3159F2C149DD7007A6790 /* Live Widget TestExtension.appex in Embed Foundation Extensions */,
 				8A60439A239C4DBB00CFB7C0 /* IronIntents.appex in Embed Foundation Extensions */,
 				8A604397239C4DBB00CFB7C0 /* IronIntentsUI.appex in Embed Foundation Extensions */,
 				8AAFE34F2534AB3900CF03E5 /* IronWidgetExtension.appex in Embed Foundation Extensions */,
@@ -514,6 +529,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17F315902C149DD6007A6790 /* Live Widget TestExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Live Widget TestExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F315942C149DD6007A6790 /* Live_Widget_TestBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live_Widget_TestBundle.swift; sourceTree = "<group>"; };
+		17F315962C149DD6007A6790 /* Live_Widget_TestLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live_Widget_TestLiveActivity.swift; sourceTree = "<group>"; };
+		17F315982C149DD6007A6790 /* Live_Widget_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live_Widget_Test.swift; sourceTree = "<group>"; };
+		17F3159A2C149DD7007A6790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17F3159C2C149DD7007A6790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A0683B4239C76E0001F0A1E /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		8A08D3D52349486800B09687 /* WorkoutData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorkoutData.xcdatamodel; sourceTree = "<group>"; };
 		8A0ADC3023294EAD00081F4B /* UITabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabView.swift; sourceTree = "<group>"; };
@@ -756,6 +777,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		17F3158D2C149DD6007A6790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F315922C149DD6007A6790 /* SwiftUI.framework in Frameworks */,
+				17F315912C149DD6007A6790 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A60437F239C4DBB00CFB7C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -820,6 +850,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17F315932C149DD6007A6790 /* Live Widget Test */ = {
+			isa = PBXGroup;
+			children = (
+				17F315942C149DD6007A6790 /* Live_Widget_TestBundle.swift */,
+				17F315962C149DD6007A6790 /* Live_Widget_TestLiveActivity.swift */,
+				17F315982C149DD6007A6790 /* Live_Widget_Test.swift */,
+				17F3159A2C149DD7007A6790 /* Assets.xcassets */,
+				17F3159C2C149DD7007A6790 /* Info.plist */,
+			);
+			path = "Live Widget Test";
+			sourceTree = "<group>";
+		};
 		8A0683B1239C615E001F0A1E /* Siri */ = {
 			isa = PBXGroup;
 			children = (
@@ -1184,6 +1226,7 @@
 				8AAFE3472534AB3800CF03E5 /* IronWidget */,
 				8A440805239C0F9C00A6D2C7 /* Tests */,
 				8A440804239C0F8000A6D2C7 /* Support */,
+				17F315932C149DD6007A6790 /* Live Widget Test */,
 				8A7D6E95200BF92E00AA0FA7 /* Products */,
 				8A6F1729233A809D0048A75B /* Frameworks */,
 			);
@@ -1200,6 +1243,7 @@
 				8A604382239C4DBB00CFB7C0 /* IronIntents.appex */,
 				8A60438B239C4DBB00CFB7C0 /* IronIntentsUI.appex */,
 				8AAFE3422534AB3800CF03E5 /* IronWidgetExtension.appex */,
+				17F315902C149DD6007A6790 /* Live Widget TestExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1532,6 +1576,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		17F3158F2C149DD6007A6790 /* Live Widget TestExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17F315A22C149DD7007A6790 /* Build configuration list for PBXNativeTarget "Live Widget TestExtension" */;
+			buildPhases = (
+				17F3158C2C149DD6007A6790 /* Sources */,
+				17F3158D2C149DD6007A6790 /* Frameworks */,
+				17F3158E2C149DD6007A6790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Live Widget TestExtension";
+			productName = "Live Widget TestExtension";
+			productReference = 17F315902C149DD6007A6790 /* Live Widget TestExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8A604381239C4DBB00CFB7C0 /* IronIntents */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A6043A1239C4DBB00CFB7C0 /* Build configuration list for PBXNativeTarget "IronIntents" */;
@@ -1595,6 +1656,7 @@
 				8A604396239C4DBB00CFB7C0 /* PBXTargetDependency */,
 				8A604399239C4DBB00CFB7C0 /* PBXTargetDependency */,
 				8AAFE34E2534AB3900CF03E5 /* PBXTargetDependency */,
+				17F3159E2C149DD7007A6790 /* PBXTargetDependency */,
 			);
 			name = Iron;
 			packageProductDependencies = (
@@ -1698,10 +1760,13 @@
 		8A7D6E8C200BF92E00AA0FA7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Karim Abou Zeid Software";
 				TargetAttributes = {
+					17F3158F2C149DD6007A6790 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					8A604381239C4DBB00CFB7C0 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -1757,11 +1822,20 @@
 				8A604381239C4DBB00CFB7C0 /* IronIntents */,
 				8A60438A239C4DBB00CFB7C0 /* IronIntentsUI */,
 				8AAFE3412534AB3800CF03E5 /* IronWidgetExtension */,
+				17F3158F2C149DD6007A6790 /* Live Widget TestExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		17F3158E2C149DD6007A6790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F3159B2C149DD7007A6790 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A604380239C4DBB00CFB7C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1836,6 +1910,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		17F3158C2C149DD6007A6790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17F315972C149DD6007A6790 /* Live_Widget_TestLiveActivity.swift in Sources */,
+				17F315952C149DD6007A6790 /* Live_Widget_TestBundle.swift in Sources */,
+				17F315992C149DD6007A6790 /* Live_Widget_Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A60437E239C4DBB00CFB7C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2216,6 +2300,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		17F3159E2C149DD7007A6790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17F3158F2C149DD6007A6790 /* Live Widget TestExtension */;
+			targetProxy = 17F3159D2C149DD7007A6790 /* PBXContainerItemProxy */;
+		};
 		8A0683BA239C77B4001F0A1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8AB5210D23992ABC008064B2 /* WorkoutDataKit */;
@@ -2288,6 +2377,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		17F315A02C149DD7007A6790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Live Widget Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Live Widget Test";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Karim Abou Zeid Software. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kabouzeid.Iron.Live-Widget-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17F315A12C149DD7007A6790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Live Widget Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Live Widget Test";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Karim Abou Zeid Software. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kabouzeid.Iron.Live-Widget-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8A60439C239C4DBB00CFB7C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2854,6 +3017,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		17F315A22C149DD7007A6790 /* Build configuration list for PBXNativeTarget "Live Widget TestExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17F315A02C149DD7007A6790 /* Debug */,
+				17F315A12C149DD7007A6790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8A6043A0239C4DBB00CFB7C0 /* Build configuration list for PBXNativeTarget "IronIntentsUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

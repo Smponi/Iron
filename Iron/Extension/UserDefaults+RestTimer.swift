@@ -39,6 +39,7 @@ extension UserDefaults {
     
     var recentRestTimes: [TimeInterval] {
         set {
+            //TODO: No clue why he is doing it this way
             assert(newValue.uniqed() == newValue)
             self.set(Array(newValue.prefix(5)), forKey: RestTimerKeys.recentRestTimes.rawValue)
         }
