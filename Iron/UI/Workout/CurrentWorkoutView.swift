@@ -53,8 +53,7 @@ struct CurrentWorkoutView: View {
         }
     }
     
-    private func createDefaultWorkoutSets(workoutExercise: WorkoutExercise) -> NSOrderedSet {
-        var numberOfSets = 3
+    fileprivate func guessNumberOfSets(_ workoutExercise: WorkoutExercise, _ numberOfSets: inout Int) {
         // try to guess the number of sets
         if let history = try? managedObjectContext.fetch(workoutExercise.historyFetchRequest), history.count >= 3 {
             // one month since last workout and at least three workouts
@@ -64,16 +63,21 @@ struct CurrentWorkoutView: View {
                     .filter {
                         guard let start = $0.workout?.start else { return false }
                         return start >= cutoff
-                }
-                .sorted {
-                    ($0.workoutSets?.count ?? 0) < ($1.workoutSets?.count ?? 0)
-                }
+                    }
+                    .sorted {
+                        ($0.workoutSets?.count ?? 0) < ($1.workoutSets?.count ?? 0)
+                    }
                 
                 assert(filteredAndSortedHistory.count >= 3)
                 let median = filteredAndSortedHistory[filteredAndSortedHistory.count / 2]
                 numberOfSets = median.workoutSets?.count ?? numberOfSets
             }
         }
+    }
+    
+    private func createDefaultWorkoutSets(workoutExercise: WorkoutExercise) -> NSOrderedSet {
+        var numberOfSets = 3
+        guessNumberOfSets(workoutExercise, &numberOfSets)
         var workoutSets = [WorkoutSet]()
         for _ in 0..<numberOfSets {
             let workoutSet = WorkoutSet.create(context: managedObjectContext)

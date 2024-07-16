@@ -42,7 +42,7 @@ struct Dragger : View {
     }
 
     private static let DRAGGER_MOVEMENT: CGFloat = 3 // higher => dragger moves more
-    private static let DRAGGER_DELTA_DIVISOR: CGFloat = 40 // higher => less sensible
+    private static let DRAGGER_DELTA_DIVISOR: CGFloat = 35 // higher => less sensible
     
     private var dragGesture: some Gesture {
         DragGesture(minimumDistance: 0)
@@ -201,15 +201,24 @@ struct Dragger : View {
                 Text(unit)
                     .lineLimit(1)
                     .foregroundColor(Color.secondary)
-                
                 Spacer()
             }
+            
             // This is a hack since tap gesture currently doesn't work on Space that hasn't a background (beta6)
             .overlay(
                 Color.fakeClear
                     .onTapGesture {
                         self.onTextTapped()
                     }
+                    // You should be able to drag within the complete are, not just when clicked in the image
+                    .gesture(dragGesture)
+                .simultaneousGesture(TapGesture()
+                    .onEnded {
+                        let feedbackGenerator = UINotificationFeedbackGenerator()
+                        feedbackGenerator.notificationOccurred(.warning)
+                        self.wiggleDraggerToggle.toggle()
+                    }
+                )
             )
 //            .animation(.none) // prevents "..." being displayed when number length changes and animation is activated
 
@@ -223,7 +232,7 @@ struct Dragger : View {
 //                .padding()
                 .imageScale(.large)
                 .frame(width: 44, height: 44)
-//                .background(RoundedRectangle(cornerRadius: 8, style: .continuous).foregroundColor(Color(.quaternarySystemFill)))
+                //.background(RoundedRectangle(cornerRadius: 8, style: .continuous).foregroundColor(Color(.quaternarySystemFill)))
                 .gesture(dragGesture)
                 .simultaneousGesture(TapGesture()
                     .onEnded {
